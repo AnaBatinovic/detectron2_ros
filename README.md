@@ -1,5 +1,3 @@
-<img src=".github/Detectron2-Logo-Horz.svg" width="300" >
-
 - [ ] Update Readme
 - [ ] Remove unused files
 - [ ] Make launch file
