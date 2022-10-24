@@ -4,6 +4,9 @@ from sensor_msgs.msg import Image
 from sensor_msgs.msg import CameraInfo
 from std_msgs.msg import UInt8MultiArray
 
+import sys
+sys.path.insert(1, "/root/catkin_ws/src/detectron2_ros/detectron2")
+
 import ros_numpy
 import numpy as np
 import numpy as np 
@@ -117,7 +120,7 @@ class Predictor(DefaultPredictor):
         """
         cfg = get_cfg()
 
-        cfg.merge_from_file("/root/catkin_ws/src/detectron2_ros/detectron_2/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")
+        cfg.merge_from_file("/root/catkin_ws/src/detectron2_ros/detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml")
         cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7
         # Mask R-CNN ResNet101 FPN weights
         cfg.MODEL.WEIGHTS = "/root/catkin_ws/src/detectron2_ros/models/model_final_a3ec72.pkl"
